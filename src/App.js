@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
-import LoginPage from "./components/pages/login/LoginPage";
+
+import Routes from "./components/routes/Index";
 
 function App() {
-  return <LoginPage />;
+  return <Routes />;
 }
 
 export default App;
