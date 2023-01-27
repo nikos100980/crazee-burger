@@ -7,7 +7,8 @@ export default function LoginForm() {
   // comportements
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Bonjour ${inputValue}`);
+
+    window.location = `/order/${inputValue}`;
     setInputValue("");
   };
 
