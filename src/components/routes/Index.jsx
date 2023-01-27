@@ -11,7 +11,7 @@ export default function Index() {
     <BrowserRouter>
     <Routes>
         <Route exact path='/' element={<LoginPage />} />
-        <Route path='/order/:id' element={<OrderPage/> }/>
+        <Route path='/order/:username' element={<OrderPage/> }/>
         <Route path ='*' element={<ErrorPage/>} />
     </Routes>
     

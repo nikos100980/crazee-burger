@@ -1,26 +1,23 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 
 export default function OrderPage() {
 
-  const {id}= useParams();
+  const {username}= useParams();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    window.location = `/`
-    
-  };
+  
 
 
   return (
-    <form action='submit' onSubmit={handleSubmit}>
+    <div>
       <h1>
-        Bonjour {id}
+        Bonjour {username}
       </h1>
       <br />
+      <Link to= "/">
       <button>Deconnexion</button>
-    </form>
+      </Link>
+    </div>
   )
 }

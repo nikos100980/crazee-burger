@@ -1,17 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function ErrorPage() {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        window.location = `/`
-    }
+    
 
   return (
-    <form action='submit' onSubmit={handleSubmit}>
+    <div>
         <h1>ErrorPage</h1>
+        <br />
+        <Link to="/">
         <button>Retourner à la page d'acceuil</button>
-    </form>
+        </Link>
+    </div>
   )
 }
