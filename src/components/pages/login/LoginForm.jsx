@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { theme } from "../../../theme";
 
 export default function LoginForm() {
   // state
@@ -23,7 +24,7 @@ export default function LoginForm() {
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
       <h1>Bienvenue chez nous !</h1>
-      <br />
+      <hr />
       <h2>Connectez-vous</h2>
       <input
         value={inputValue}
@@ -40,32 +41,27 @@ export default function LoginForm() {
 }
 
 const LoginFormStyled = styled.form`
-
+  text-align: center;
+  max-width: 500px;
+  min-width: 400px;
+  margin: 0px auto;
+  padding: 2.5rem 2rem;
+  border-radius: 5px;
+  font-family: "Amatic SC", cursive;
 
   h1 {
-    font-family: "Amatic SC";
-    font-style: normal;
-    font-weight: 700;
+    color: ${theme.colors.white};
     font-size: 48px;
-    line-height: 61px;
-    
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #ffffff;
+  }
+  hr {
+    border: 1.5px solid ${theme.colors.primary};
+    margin-bottom: 40px;
   }
   h2 {
-    font-family: "Amatic SC";
-    font-style: normal;
-    font-weight: 700;
     font-size: 36px;
-    line-height: 46px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    /* line-height: 36px; */
+    color: ${theme.colors.white};
 
-    color: #ffffff;
+    
   }
 `;
