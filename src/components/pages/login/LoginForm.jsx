@@ -40,13 +40,7 @@ export default function LoginForm() {
 }
 
 const LoginFormStyled = styled.form`
-  position: absolute;
-  width: 464px;
-  height: 438.31px;
-  left: calc(50% - 464px / 2);
-  top: calc(50% - 438.31px / 2 + 42.11px);
 
-  border-radius: 5px;
 
   h1 {
     font-family: "Amatic SC";
@@ -54,7 +48,7 @@ const LoginFormStyled = styled.form`
     font-weight: 700;
     font-size: 48px;
     line-height: 61px;
-    /* identical to box height, or 127% */
+    
 
     display: flex;
     align-items: center;
