@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../theme";
-import { BsPersonCircle} from "react-icons/bs";
-import {IoChevronForwardOutline} from "react-icons/io5"
+import { BsPersonCircle } from "react-icons/bs";
+import { IoChevronForwardOutline } from "react-icons/io5";
+import Input from "./Input";
 export default function LoginForm() {
   // state
   const [inputValue, setInputValue] = useState("");
@@ -28,18 +29,15 @@ export default function LoginForm() {
         <h1>Bienvenue chez nous !</h1>
         <hr />
         <h2>Connectez-vous</h2>
-        <div className="input-container">
-          <BsPersonCircle className="personCircle-icon" />
-          <input
-            value={inputValue}
-            onChange={handleChange}
-            type="text"
-            name=""
-            id=""
-            placeholder="Entrez votre prénom"
-            required
-          />
-        </div>
+      </div>
+      <div>
+        <Input
+          value={inputValue}
+          onChange={handleChange}
+          placeholder={"Entrez votre prénom"}
+          Icon={<BsPersonCircle className="personCircle-icon" />}
+          required
+        />
         <button className="button-container">
           <span>Accéder à mon espace</span>
           <IoChevronForwardOutline className="chevronRight-icon" />
@@ -71,29 +69,7 @@ const LoginFormStyled = styled.form`
     /* line-height: 36px; */
     color: ${theme.colors.white};
   }
-  .input-container {
-    display: flex;
-    align-items: center;
-    padding: 18px 24px;
-    margin: 18px 0;
-    background: ${theme.colors.white};
-    border-radius: 5px;
 
-    input {
-      font-size: 15px;
-      border-style: none;
-      background: #ffffff;
-      width: 100%;
-
-      ::placeholder {
-        color: ${theme.colors.greyLight};
-        background: ${theme.colors.white};
-      }
-      :focus {
-        outline: none;
-      }
-    }
-  }
   .personCircle-icon {
     font-size: 15px;
     margin-right: 8px;
@@ -112,8 +88,8 @@ const LoginFormStyled = styled.form`
     padding: 18px 24px;
     font-weight: 800;
     color: ${theme.colors.white};
-    background-color:${theme.colors.primary};
-    
+    background-color: ${theme.colors.primary};
+
     border: 1px solid ${theme.colors.primary};
     border-radius: 5px;
 
@@ -124,9 +100,8 @@ const LoginFormStyled = styled.form`
     }
     &:active {
       color: ${theme.colors.white};
-      background-color:${theme.colors.primary};
+      background-color: ${theme.colors.primary};
       border: 1px solid ${theme.colors.primary};
-
     }
 
     &:disabled {
@@ -139,7 +114,6 @@ const LoginFormStyled = styled.form`
       align-items: center;
       font-size: 15px;
       margin-left: 10px;
-
     }
   }
 `;
