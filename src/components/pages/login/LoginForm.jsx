@@ -5,6 +5,8 @@ import { theme } from "../../../theme";
 import { BsPersonCircle } from "react-icons/bs";
 import { IoChevronForwardOutline } from "react-icons/io5";
 import TextInput from "../reusable-ui/TexInput";
+import PrimaryButton from "../reusable-ui/PrimaryButton";
+
 export default function LoginForm() {
   // state
   const [inputValue, setInputValue] = useState("");
@@ -38,10 +40,10 @@ export default function LoginForm() {
           Icon={<BsPersonCircle className="personCircle-icon" />}
           required
         />
-        <button className="button-container">
-          <span>Accéder à mon espace</span>
-          <IoChevronForwardOutline className="chevronRight-icon" />
-        </button>
+        <PrimaryButton
+          Icon={<IoChevronForwardOutline className="chevronRight-icon" />}
+          label={"Accéder à mon espace"}
+        />
       </div>
     </LoginFormStyled>
   );
@@ -75,45 +77,11 @@ const LoginFormStyled = styled.form`
     margin-right: 8px;
     color: ${theme.colors.greyBlue};
   }
-  .button-container {
-    width: 100%;
-    display: inline-flex;
+  .chevronRight-icon {
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    white-space: nowrap;
-    text-decoration: none;
-    line-height: 1;
-
-    padding: 18px 24px;
-    font-weight: 800;
-    color: ${theme.colors.white};
-    background-color: ${theme.colors.primary};
-
-    border: 1px solid ${theme.colors.primary};
-    border-radius: 5px;
-
-    &:hover:not(:disabled) {
-      background-color: ${theme.colors.white};
-      color: ${theme.colors.primary};
-      border: 1px solid ${theme.colors.primary};
-    }
-    &:active {
-      color: ${theme.colors.white};
-      background-color: ${theme.colors.primary};
-      border: 1px solid ${theme.colors.primary};
-    }
-
-    &:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-    .chevronRight-icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 15px;
-      margin-left: 10px;
-    }
+    font-size: 15px;
+    margin-left: 10px;
   }
 `;

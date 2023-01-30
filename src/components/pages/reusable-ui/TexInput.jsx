@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../theme";
 
-export default function Input({ value, onChange, Icon, ...extraprops }) {
+export default function TextInput({ value, onChange, Icon, ...extraprops }) {
   return (
     <InputStyled>
       {Icon && Icon}
