@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../theme";
-import { BsPersonCircle } from "react-icons/bs";
-
+import { BsPersonCircle} from "react-icons/bs";
+import {IoChevronForwardOutline} from "react-icons/io5"
 export default function LoginForm() {
   // state
   const [inputValue, setInputValue] = useState("");
@@ -24,22 +24,27 @@ export default function LoginForm() {
   //affichage ( render)
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
-      <h1>Bienvenue chez nous !</h1>
-      <hr />
-      <h2>Connectez-vous</h2>
-      <div className="input-container">
-        <BsPersonCircle className="personCircle-icon" />
-        <input
-          value={inputValue}
-          onChange={handleChange}
-          type="text"
-          name=""
-          id=""
-          placeholder="Entrez votre prénom"
-          required
-        />
+      <div>
+        <h1>Bienvenue chez nous !</h1>
+        <hr />
+        <h2>Connectez-vous</h2>
+        <div className="input-container">
+          <BsPersonCircle className="personCircle-icon" />
+          <input
+            value={inputValue}
+            onChange={handleChange}
+            type="text"
+            name=""
+            id=""
+            placeholder="Entrez votre prénom"
+            required
+          />
+        </div>
+        <button className="button-container">
+          <span>Accéder à mon espace</span>
+          <IoChevronForwardOutline className="chevronRight-icon" />
+        </button>
       </div>
-      <button>Accédez à votre espace</button>
     </LoginFormStyled>
   );
 }
@@ -68,43 +73,21 @@ const LoginFormStyled = styled.form`
   }
   .input-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     padding: 18px 24px;
-    gap: 12.8px;
-
-    width: 400px;
-    height: 25px;
-
+    margin: 18px 0;
     background: ${theme.colors.white};
     border-radius: 5px;
 
     input {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 0px 184.203px 0px 0px;
+      font-size: 15px;
       border-style: none;
-      height: 17px;
-      left: 2px;
-      top: 1px;
-
       background: #ffffff;
+      width: 100%;
 
       ::placeholder {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0px 184.203px 0px 0px;
-        color: #d3d3d3;
-        line-height: 17px;
-        position: absolute;
-        width: 320.2px;
-        height: 17px;
-        left: 2px;
-        top: 1px;
-
-        background: #ffffff;
+        color: ${theme.colors.greyLight};
+        background: ${theme.colors.white};
       }
       :focus {
         outline: none;
@@ -112,8 +95,51 @@ const LoginFormStyled = styled.form`
     }
   }
   .personCircle-icon {
-    width: 15px;
-    height: 15px;
+    font-size: 15px;
+    margin-right: 8px;
     color: ${theme.colors.greyBlue};
+  }
+  .button-container {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 1;
+
+    padding: 18px 24px;
+    font-weight: 800;
+    color: ${theme.colors.white};
+    background-color:${theme.colors.primary};
+    
+    border: 1px solid ${theme.colors.primary};
+    border-radius: 5px;
+
+    &:hover:not(:disabled) {
+      background-color: ${theme.colors.white};
+      color: ${theme.colors.primary};
+      border: 1px solid ${theme.colors.primary};
+    }
+    &:active {
+      color: ${theme.colors.white};
+      background-color:${theme.colors.primary};
+      border: 1px solid ${theme.colors.primary};
+
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .chevronRight-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      margin-left: 10px;
+
+    }
   }
 `;
