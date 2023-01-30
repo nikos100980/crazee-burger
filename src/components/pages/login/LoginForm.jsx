@@ -54,34 +54,34 @@ const LoginFormStyled = styled.form`
   max-width: 500px;
   min-width: 400px;
   margin: 0px auto;
-  padding: 2.5rem 2rem;
-  border-radius: 5px;
+  padding: 40px ${theme.spacing.lg};
+  border-radius: ${theme.borderRadius.round};
   font-family: "Amatic SC", cursive;
 
   h1 {
     color: ${theme.colors.white};
-    font-size: 48px;
+    font-size: ${theme.fonts.size.P5};
   }
   hr {
-    border: 1.5px solid ${theme.colors.primary};
+    border: 1.5px solid ${theme.colors.red};
     margin-bottom: 40px;
   }
   h2 {
-    font-size: 36px;
+    font-size: ${theme.fonts.size.P4};
     /* line-height: 36px; */
     color: ${theme.colors.white};
   }
 
   .personCircle-icon {
-    font-size: 15px;
+    font-size: ${theme.fonts.size.P0};
     margin-right: 8px;
-    color: ${theme.colors.greyBlue};
+    color: ${theme.colors.greySemiDark};
   }
   .chevronRight-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: ${theme.fonts.size.P0};
     margin-left: 10px;
   }
 `;

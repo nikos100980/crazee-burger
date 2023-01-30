@@ -17,16 +17,16 @@ const InputStyled = styled.div`
   padding: 18px 24px;
   margin: 18px 0;
   background: ${theme.colors.white};
-  border-radius: 5px;
+  border-radius: ${theme.borderRadius.round};
 
   input {
-    font-size: 15px;
+    font-size: ${theme.fonts.size.P0};
     border-style: none;
-    background: #ffffff;
+    color: ${theme.colors.dark};
     width: 100%;
 
     ::placeholder {
-      color: ${theme.colors.greyLight};
+      color: ${theme.colors.greyMedium};
       background: ${theme.colors.white};
     }
     :focus {

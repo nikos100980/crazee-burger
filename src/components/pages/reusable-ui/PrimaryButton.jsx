@@ -22,12 +22,12 @@ const PrimaryButtonStyled = styled.button`
   line-height: 1;
 
   padding: 18px 24px;
-  font-weight: 800;
+  font-weight: ${theme.fonts.weights.heavy};
   color: ${theme.colors.white};
   background-color: ${theme.colors.primary};
 
   border: 1px solid ${theme.colors.primary};
-  border-radius: 5px;
+  border-radius: ${theme.borderRadius.round};
 
   &:hover:not(:disabled) {
     background-color: ${theme.colors.white};
