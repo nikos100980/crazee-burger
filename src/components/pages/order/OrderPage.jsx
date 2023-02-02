@@ -9,20 +9,16 @@ export default function OrderPage() {
   return (
     <OrderPageStyled>
       <div className="container">
-        <nav>
-          <div className="nav-logo">logo</div>
-          <div className="deconnection">
-            <div className="button-deconnection">
-              <h1>Bonjour {username}</h1>
-              <br />
-              <Link to="/">
-                <button>Deconnexion</button>
-              </Link>
-            </div>
-            <div className="icon-profil">icon</div>
-          </div>
-        </nav>
-        <main></main>
+        <div className="nav"> NavBar
+          <h1>Bonjour {username}</h1>
+          <br />
+          <Link to="/">
+            <button>Deconnexion</button>
+          </Link>
+
+          <div className="icon-profil">icon</div>
+        </div>
+        <main>Main</main>
       </div>
     </OrderPageStyled>
   );
@@ -32,72 +28,29 @@ const OrderPageStyled = styled.div`
   background: ${theme.colors.primary};
   height: 100vh;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 24.5469px 56px 24.5625px;
-
-  position: relative;
-  width: 1512px;
-  height: 982px;
+  justify-content: center;
+  align-items: center;
 
   .container {
     background: red;
-    height: 932.89px;
+    height: 95vh;
     width: 1400px;
-    border-radius: ${theme.borderRadius.extraRound};
-    /* flex: none;
-    order: 0;
-    flex-grow: 0; */
-  }
-  nav {
-    background: pink;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 70px 0px 20px;
-    gap: 950.23px;
-    position: absolute;
-    width: 1400px;
-    height: 98.19px;
-    left: 0px;
-    top: 0px;
-    border-radius: 15px 15px 0px 0px;
+    flex-direction: column;
+    /* border-radius: ${theme.borderRadius.extraRound}; */
 
-    .nav-logo {
-      width: 240.48px;
-      height: 98.19px;
-    }
-
-    .deconnection {
+    .nav {
+      background: #3919f0;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 0px;
-      gap: 10px;
+      flex-direction: column;
 
-      width: 119.28px;
-      height: 44px;
+      height: 10vh;
+      /* border-radius: 15px 15px 0px 0px; */
 
-      .button-deconnection{
-        width: 73.28px;
-        height: 44px;
- 
-      }
-      .icon-profil{
-        
-        width: 36px;
-        height: 36px;
-        top: 4px;
-        left: 83.28px;
-      }
     }
-  }
-  main {
-    position: absolute;
-    left: 0px;
-    top: 98.19px;
-    background: green;
-    height: 834.7px;
-    width: 1400px;
+    main {
+      background: green;
+      flex: 1;
+    }
   }
 `;
