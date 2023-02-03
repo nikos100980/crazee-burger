@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { BsPersonCircle } from "react-icons/bs";
 import NavbarRightSide from "./NavbarRightSide";
+import Logo from "../reusable-ui/Logo";
 
 export default function Navbar({ username }) {
   return (
     <NavbarStyled>
-      <div className="left-side">Left</div>
+      <Logo />
       <NavbarRightSide
         Icon={<BsPersonCircle className="icon-profil" />}
         username={username}
@@ -21,6 +22,7 @@ const NavbarStyled = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  padding: 0 70px 0 20px;
   /* border-radius: 15px 15px 0px 0px; */
 
   .left-side {

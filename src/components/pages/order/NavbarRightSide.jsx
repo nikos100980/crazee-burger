@@ -22,15 +22,13 @@ export default function NavbarRightSide({ username, Icon }) {
 const NavbarRightSideStyled = styled.div`
   width: 119.28px;
   height: 44px;
-  margin-right: 70px;
-  margin-top: 27.09px;
-  margin-bottom: 27.09px;
+ 
   display: flex;
   flex-direction: row;
   align-items: center;
 
-  gap: 10px;
-  padding: 0px;
+   gap: 10px;
+  padding: 0px; 
 
   .profil-name {
     width: 73.28px;
