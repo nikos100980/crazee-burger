@@ -23,7 +23,7 @@ const NavbarStyled = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  padding: 0 70px 0 20px;
+  padding: 0 20px;
    border-radius: 15px 15px 0px 0px;
 
   .left-side {
