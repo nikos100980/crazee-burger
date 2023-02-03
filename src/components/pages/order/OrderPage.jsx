@@ -1,7 +1,9 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
 import { theme } from "../../../theme";
 import styled from "styled-components";
+import Navbar from "./Navbar";
+import { useParams } from "react-router-dom";
+import Main from "./Main";
 
 export default function OrderPage() {
   const { username } = useParams();
@@ -9,16 +11,10 @@ export default function OrderPage() {
   return (
     <OrderPageStyled>
       <div className="container">
-        <div className="nav"> NavBar
-          <h1>Bonjour {username}</h1>
-          <br />
-          <Link to="/">
-            <button>Deconnexion</button>
-          </Link>
-
-          <div className="icon-profil">icon</div>
-        </div>
-        <main>Main</main>
+        
+          <Navbar username={username} />
+        
+        <Main/>
       </div>
     </OrderPageStyled>
   );
@@ -39,18 +35,6 @@ const OrderPageStyled = styled.div`
     flex-direction: column;
     /* border-radius: ${theme.borderRadius.extraRound}; */
 
-    .nav {
-      background: #3919f0;
-      display: flex;
-      flex-direction: column;
-
-      height: 10vh;
-      /* border-radius: 15px 15px 0px 0px; */
-
-    }
-    main {
-      background: green;
-      flex: 1;
-    }
+    
   }
 `;
