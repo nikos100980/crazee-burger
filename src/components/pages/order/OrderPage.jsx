@@ -33,7 +33,7 @@ const OrderPageStyled = styled.div`
     width: 1400px;
     display: flex;
     flex-direction: column;
-    /* border-radius: ${theme.borderRadius.extraRound}; */
+     border-radius: ${theme.borderRadius.extraRound};
 
     
   }

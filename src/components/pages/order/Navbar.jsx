@@ -6,8 +6,9 @@ import Logo from "../reusable-ui/Logo";
 
 export default function Navbar({ username }) {
   return (
-    <NavbarStyled>
-      <Logo />
+    <NavbarStyled onClick={()=>window.location.reload()}>
+      <Logo  />
+
       <NavbarRightSide
         Icon={<BsPersonCircle className="icon-profil" />}
         username={username}
@@ -17,13 +18,13 @@ export default function Navbar({ username }) {
 }
 
 const NavbarStyled = styled.nav`
-  background: #3919f0;
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
   padding: 0 70px 0 20px;
-  /* border-radius: 15px 15px 0px 0px; */
+   border-radius: 15px 15px 0px 0px;
 
   .left-side {
     background: pink;
