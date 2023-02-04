@@ -11,10 +11,9 @@ export default function OrderPage() {
   return (
     <OrderPageStyled>
       <div className="container">
-        
-          <Navbar username={username} />
-        
-        <Main/>
+        <Navbar username={username} />
+
+        <Main />
       </div>
     </OrderPageStyled>
   );
@@ -28,13 +27,11 @@ const OrderPageStyled = styled.div`
   align-items: center;
 
   .container {
-    background: red;
+    
     height: 95vh;
     width: 1400px;
     display: flex;
     flex-direction: column;
-     border-radius: ${theme.borderRadius.extraRound};
-
-    
+    border-radius: ${theme.borderRadius.extraRound};
   }
 `;
