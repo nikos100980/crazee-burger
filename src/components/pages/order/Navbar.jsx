@@ -7,8 +7,8 @@ import { theme } from "../../../theme";
 
 export default function Navbar({ username }) {
   return (
-    <NavbarStyled onClick={() => window.location.reload()}>
-      <Logo />
+    <NavbarStyled >
+      <Logo className= "logo-order-page" onClick={() => window.location.reload()}/>
 
       <NavbarRightSide
         Icon={<BsPersonCircle className="icon-profil" />}
@@ -27,4 +27,8 @@ const NavbarStyled = styled.nav`
   padding: 0 20px;
   border-top-left-radius: ${theme.borderRadius.extraRound};
   border-top-right-radius: ${theme.borderRadius.extraRound};
+
+  .logo-order-page{
+    cursor: pointer;
+  }
 `;
