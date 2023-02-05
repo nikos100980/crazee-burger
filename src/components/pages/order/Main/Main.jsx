@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../theme";
+import Menu from "./Menu";
 
 export default function Main() {
   return (
     <MainStyled>
        <div className="basket-container">basket</div>
-      <div className="menu-container">menu</div>
+       <Menu />
+      
     </MainStyled>
   );
 }
@@ -24,8 +26,5 @@ const MainStyled = styled.main`
     background: purple;
     flex-basis: 25%;
   }
-  .menu-container {
-    background: green;
-    flex-basis: 75%;
-  }
+  
 `;
