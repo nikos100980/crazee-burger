@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { BsPersonCircle } from "react-icons/bs";
 import NavbarRightSide from "./NavbarRightSide";
-import Logo from "../reusable-ui/Logo";
-import { theme } from "../../../theme";
+import Logo from "../../reusable-ui/Logo";
+import { theme } from "../../../../theme";
 
 export default function Navbar({ username }) {
   return (

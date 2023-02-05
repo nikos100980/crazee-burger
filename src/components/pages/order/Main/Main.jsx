@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../../theme";
+import { theme } from "../../../../theme";
 
 export default function Main() {
   return (
     <MainStyled>
-      <div className="basket-container">basket</div>
+       <div className="basket-container">basket</div>
       <div className="menu-container">menu</div>
     </MainStyled>
   );
