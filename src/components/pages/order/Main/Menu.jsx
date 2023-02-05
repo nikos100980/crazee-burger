@@ -10,6 +10,8 @@ export default function Menu() {
 const MenuStyled = styled.div`
   
     background: green;
-    flex-basis: 75%;
+    flex-basis: 100%;
+    
+    /* flex-basis: 75% */
   
 `;
