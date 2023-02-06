@@ -18,9 +18,10 @@ const MainStyled = styled.main`
   box-shadow: ${theme.shadows.strong};
   border-bottom-left-radius: ${theme.borderRadius.extraRound};
   border-bottom-right-radius: ${theme.borderRadius.extraRound};
-  display: flex;
-  flex-direction: row;
-  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* flex: 1; */
+  overflow-y: scroll;
 
   /* .basket-container {
     background: purple;
