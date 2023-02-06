@@ -20,7 +20,7 @@ const MainStyled = styled.main`
   border-bottom-right-radius: ${theme.borderRadius.extraRound};
   display: grid;
   grid-template-columns: 1fr;
-  /* flex: 1; */
+   flex: 1;
   overflow-y: scroll;
 
   /* .basket-container {
