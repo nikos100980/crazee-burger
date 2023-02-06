@@ -21,16 +21,21 @@ export default function Product({title, imageSource, price}) {
 const ProductStyled = styled.div`
   
     background: orange;
-    width: 240px;
-    height: 330px;
+    width: 200px;
+    height: 300px;
+    display: grid;
+    grid-template-rows: 65% 1fr;
+    padding: 20px;
+    padding-bottom: 10px;
 
     .product-image {
       border: solid 1px green;
-      width: 100px;
+      width: 100%;
       height: auto;
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: contain;
       }
     }
     .product-info-text {
