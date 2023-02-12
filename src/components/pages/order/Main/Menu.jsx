@@ -3,17 +3,17 @@ import styled from "styled-components";
 import { fakeMenu2 } from "../../../../data/fakeMenu";
 import { theme } from "../../../../theme";
 import Card from "../../reusable-ui/Card";
-import {formatPrice} from "../../../Utils";
+import { formatPrice } from "../../../Utils";
 
 export default function Menu() {
   const [menu, setMenu] = useState(fakeMenu2);
 
   return (
     <MenuStyled className="menu-container">
-      {menu.map(({id, title, imageSource, price}) => {
+      {menu.map(({ id, title, imageSource, price }) => {
         return (
           <Card
-          key={id}
+            key={id}
             title={title}
             imageSource={imageSource}
             leftDescription={formatPrice(price)}
