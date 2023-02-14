@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
@@ -7,22 +7,30 @@ import ToggleButton from "../../reusable-ui/ToggleButton";
 import Profile from "./Profile";
 
 export default function NavbarRightSide({ username, Icon }) {
-  const notify = () => {
-    toast.info("Mode admin activé", {
-      //  icon: <FaUserSecret size={30} />,
-      theme: "dark",
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+  const [isModeAdmin, setIsModeAdmin] = useState(false);
+  const displayToastNotification = () => {
+    if (!isModeAdmin) {
+      toast.info("Mode admin activé", {
+        //  icon: <FaUserSecret size={30} />,
+        theme: "dark",
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+    setIsModeAdmin(!isModeAdmin);
   };
   return (
     <NavbarRightSideStyled className="right-side">
-      <ToggleButton labelIfChecked="DESACTIVER LE MODE ADMIN" labelIfUnchecked="ACTIVER LE MODE ADMIN"  onToggle={notify} />
+      <ToggleButton
+        labelIfChecked="DESACTIVER LE MODE ADMIN"
+        labelIfUnchecked="ACTIVER LE MODE ADMIN"
+        onToggle={displayToastNotification}
+      />
 
       <ToastContainer className="toaster" bodyClassName="body-toast" />
 
@@ -35,7 +43,6 @@ const NavbarRightSideStyled = styled.div`
   display: flex;
   align-items: center;
   padding-right: 50px;
-  
 
   .toaster {
     max-width: 300px;
